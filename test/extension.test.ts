@@ -16,10 +16,10 @@ import { TextDocument, workspace, window} from 'vscode';
 const formatFilesPath = path.join(__dirname, '..', '..', 'test', 'testfiles');
 
 const jsonTestFile = path.join(formatFilesPath, 'jsontest.JSON-tmLanguage');
-const jsonResultFile = path.join(formatFilesPath, 'jsontest.tmLanguage');
+const jsonResultFile = 'jsontest.tmLanguage';
 
 const yamlTestFile = path.join(formatFilesPath, 'yamltest.YAML-tmLanguage');
-const yamlResultFile = path.join(formatFilesPath, 'yamltest.tmLanguage');
+const yamlResultFile = 'yamltest.tmLanguage';
 
 // Defines a Mocha test suite to group tests of similar kind together
 suite("File conversion tests Tests", () => {
@@ -31,21 +31,25 @@ suite("File conversion tests Tests", () => {
 		var success : boolean = await fileConverter.convertFileToTml();
 		assert.equal(true, success);
 
-		let resultDoc = workspace.textDocuments.find((doc : TextDocument) => { return doc.fileName == jsonResultFile;});
-		var text = resultDoc.getText();
+		let result = path.join(path.dirname(textDocument.fileName), jsonResultFile);
+		let resultDoc = workspace.textDocuments.find((doc : TextDocument) => 
+			{ return doc.fileName == result;});
+		var text = !!resultDoc ? resultDoc.getText() : "";
 		assert.notEqual(text, "");
 	});
 
 	test('Convert from yaml to tmLanguage', async function() {
-		const textDocument = await workspace.openTextDocument(jsonTestFile);
+		const textDocument = await workspace.openTextDocument(yamlTestFile);
 		const textEditor = await window.showTextDocument(textDocument);
 
 		const fileConverter: FileConverter = new FileConverter();
 		var success : boolean = await fileConverter.convertFileToTml();
 		assert.equal(true, success);
 
-		let resultDoc = workspace.textDocuments.find((doc : TextDocument) => { return doc.fileName == jsonResultFile;});
-		var text = resultDoc.getText();
+		let result = path.join(path.dirname(textDocument.fileName), yamlResultFile);
+		let resultDoc = workspace.textDocuments.find((doc : TextDocument) => 
+			{ return doc.fileName == result;});
+		var text = !!resultDoc ? resultDoc.getText() : "";
 		assert.notEqual(text, "");
 	});
 });
