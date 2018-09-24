@@ -2,13 +2,18 @@ import * as vscode from 'vscode';
 import jsonTmLanguageAnalyser from './jsonTmLanguageAnalyser';
 
 export default class jsonTmLanguageDiagnosticProvider{
+
+    private uuidErrors: vscode.DiagnosticCollection;
+
+    public jsonTmLanguageDiagnosticProvider() {
+        this.uuidErrors = vscode.languages.createDiagnosticCollection("languageErrors");
+    }
+
     public CreateDiagnostics(document : vscode.TextDocument){
         let diagnostics: vscode.Diagnostic[] = [];
-        let uuidErrors = vscode.languages.createDiagnosticCollection("languageErrors");
-
         let analyser = new jsonTmLanguageAnalyser();
-       
         var guidRegex = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+
         try{
             let docContent = analyser.getAnalysis(document);
             // Need to determine a mapping back to the source text for each element        
@@ -49,7 +54,7 @@ export default class jsonTmLanguageDiagnosticProvider{
             }
         }
         
-        uuidErrors.set(document.uri, diagnostics);
+        this.uuidErrors.set(document.uri, diagnostics);
     }
     
     private searchElements(element: any, matchingTitle: string){
