@@ -10,19 +10,19 @@ it's a recommended format for VSCODE syntax highlighting.
 
 ## Currently Included
 
-### Syntax Highlighting and Snippets for JSON-tmLanguage files
+### Syntax Highlighting and Snippets for `tmLanguage.json` files
 ![JSON-tmLanguage](/images/json_sample.png)
 
-### Syntax Highlighting and Snippets for YAML-tmLanguage files
+### Syntax Highlighting and Snippets for `tmLanguage.yml` files
 ![YAML-tmLanguage](/images/yaml_sample.png)
 
 ### Conversion between tmLanguage file variants
 ![Available Commands](/images/commands_sample.png)
 
 Included commands are:
-- Convert to JSON-tmLanguage file - Converts to JSON from YAML/PLIST
+- Convert to tmLanguage.json file - Converts to JSON from YAML/PLIST
 - Convert to tmLanguage file - Converts to PLIST from YAML/JSON
-- Convert to YAML-tmLanguage file - Converts to YAML from JSON/PLIST
+- Convert to tmLanguage.yml file - Converts to YAML from JSON/PLIST
 
 # Settings
 tmLanguage.replaceExistingFile - Whether the conversion replaces the existing file or creates a new one. Defaults to true

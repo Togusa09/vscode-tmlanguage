@@ -5,6 +5,7 @@
 	<key>fileTypes</key>
 	<array>
 		<string>xml</string>
+		<string>plist</string>
 		<string>tld</string>
 		<string>jsp</string>
 		<string>pt</string>
@@ -584,6 +585,6 @@
 	<key>scopeName</key>
 	<string>text.xml</string>
 	<key>uuid</key>
-	<string>D3C4E6DA-6B1C-11D9-8CC2-000D93589AF6</string>
+	<string>DBB8C315-FFA0-42C1-B7D2-C05EB5DFC159</string>
 </dict>
 </plist>

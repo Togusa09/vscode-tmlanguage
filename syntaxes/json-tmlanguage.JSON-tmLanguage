@@ -2,7 +2,7 @@
 { 
     "name": "Sublime Text Syntax Def (JSON)",
     "scopeName": "source.json-tmlanguage",
-    "fileTypes": ["JSON-tmLanguage"],
+    "fileTypes": ["tmLanguage.json", "JSON-tmLanguage"],
 
   "patterns": [
     { "include": "#syntaxName" },
@@ -196,5 +196,5 @@
       }
   },
 
-  "uuid": "8c7e3a99-1780-4b72-9ce5-585949c0563e"
+  "uuid": "81C49DF1-5CAE-46EB-B64D-DF8994E82191"
 }
