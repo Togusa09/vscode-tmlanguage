@@ -4,6 +4,7 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
+		<string>tmLanguage.json</string>
 		<string>JSON-tmLanguage</string>
 	</array>
 	<key>name</key>
@@ -476,6 +477,6 @@
 	<key>scopeName</key>
 	<string>source.json-tmlanguage</string>
 	<key>uuid</key>
-	<string>8c7e3a99-1780-4b72-9ce5-585949c0563e</string>
+	<string>81C49DF1-5CAE-46EB-B64D-DF8994E82191</string>
 </dict>
 </plist>

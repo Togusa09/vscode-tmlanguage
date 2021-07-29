@@ -36,9 +36,9 @@ export class FileConverter{
     private fileExtensionFor(destinationLanguage: string) : string {
         switch (destinationLanguage.toLowerCase()) {
             case "json-tmlanguage":
-                return "JSON-tmLanguage";
+                return "tmLanguage.json";
             case "yaml-tmlanguage":
-                return "YAML-tmLanguage";
+                return "tmLanguage.yml";
             case "tmlanguage":
                 return "tmLanguage";
             default:

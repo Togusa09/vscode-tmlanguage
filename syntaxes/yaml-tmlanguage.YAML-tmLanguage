@@ -1,9 +1,13 @@
 # [PackageDev] target_format: plist, ext: tmLanguage
 ---
 name: Sublime Text Syntax Def (YAML)
-fileTypes: [YAML-tmLanguage]
+fileTypes: [
+  tmLanguage.yml
+  YAML-tmLanguage
+  tmLanguage.yaml
+]
 scopeName: source.yaml-tmlanguage
-uuid: 112dad9d-558e-4ab2-a4cc-c5f1ffa80ee6
+uuid: 130ad0a9-3b22-4f45-8ec2-72f534b15c91
 
 patterns:
 ## first, match the global stuff

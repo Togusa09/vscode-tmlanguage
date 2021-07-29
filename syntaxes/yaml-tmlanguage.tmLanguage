@@ -4,7 +4,9 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
+		<string>tmLanguage.yml</string>
 		<string>YAML-tmLanguage</string>
+		<string>tmLanguage.yaml</string>
 	</array>
 	<key>name</key>
 	<string>Sublime Text Syntax Def (YAML)</string>
@@ -1466,6 +1468,6 @@ comment
 	<key>scopeName</key>
 	<string>source.yaml-tmlanguage</string>
 	<key>uuid</key>
-	<string>112dad9d-558e-4ab2-a4cc-c5f1ffa80ee6</string>
+	<string>130ad0a9-3b22-4f45-8ec2-72f534b15c91</string>
 </dict>
 </plist>
