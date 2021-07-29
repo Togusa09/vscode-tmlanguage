@@ -51,11 +51,11 @@
     "commands": [
       {
         "command": "extension.convertToJsonTml",
-        "title": "Convert to JSON-tmLanguage File"
+        "title": "Convert to tmLanguage JSON File"
       },
       {
         "command": "extension.convertToYamlTml",
-        "title": "Convert to YAML-tmLanguage File"
+        "title": "Convert to tmLanguage YAML File"
       },
       {
         "command": "extension.convertToTml",
@@ -74,6 +74,7 @@
           "json-tmlanguage"
         ],
         "extensions": [
+          ".tmLanguage.json",
           ".JSON-tmLanguage"
         ],
         "configuration": "./json-tmlanguage.configuration.json"
@@ -85,7 +86,9 @@
           "yaml-tmlanguage"
         ],
         "extensions": [
-          ".YAML-tmLanguage"
+          ".tmLanguage.yml",
+          ".YAML-tmLanguage",
+          ".tmLanguage.yaml"
         ],
         "configuration": "./yaml-tmlanguage.configuration.json"
       }
